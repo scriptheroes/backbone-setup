@@ -7,7 +7,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-connect');
-    grunt.loadNpmTasks('grunt-bower-task');
     grunt.loadNpmTasks('grunt-open');
 
     grunt.initConfig({
@@ -39,10 +38,8 @@ module.exports = function (grunt) {
 
                         config: 'src/config',
                         app: 'src/app',
-                        auth: 'src/auth',
                         controller: 'src/controller',
                         router: 'src/router',
-                        mainView: 'src/main-view',
                         controllers: 'src/controllers',
                         views: 'src/views',
                         util: 'src/util',
@@ -82,71 +79,6 @@ module.exports = function (grunt) {
                         'styles/**/*'
                     ]
                 }]
-            },
-            bower: {
-                files: [
-                    // backbone
-                    {
-                        expand: true,
-                        flatten: true,
-                        src: [
-                            'app/.bower_components/backbone/backbone.js',
-                            'app/.bower_components/backbone/backbone-min.js',
-                            'app/.bower_components/backbone/backbone-min.map'
-                        ],
-                        dest: 'app/bower_components/backbone/'
-                    },
-                    // jquery
-                    {
-                        expand: true,
-                        flatten: true,
-                        src: [
-                            'app/.bower_components/jquery/dist/jquery.js',
-                            'app/.bower_components/jquery/dist/jquery.min.map',
-                            'app/.bower_components/jquery/dist/jquery.min.js'
-                        ],
-                        dest: 'app/bower_components/jquery/'
-                    },
-                    // modernizr
-                    {
-                        expand: true,
-                        flatten: true,
-                        src: ['app/.bower_components/modernizr/modernizr.js'],
-                        dest: 'app/bower_components/modernizr/'
-                    },
-                    // requirejs
-                    {
-                        expand: true,
-                        flatten: true,
-                        src: ['app/.bower_components/requirejs/require.js'],
-                        dest: 'app/bower_components/requirejs/'
-                    },
-                    // requirejs i18n
-                    {
-                        expand: true,
-                        flatten: true,
-                        src: ['app/.bower_components/requirejs-i18n/i18n.js'],
-                        dest: 'app/bower_components/requirejs-i18n/'
-                    },
-                    // requirejs text
-                    {
-                        expand: true,
-                        flatten: true,
-                        src: ['app/.bower_components/requirejs-text/text.js'],
-                        dest: 'app/bower_components/requirejs-text/'
-                    },
-                    // underscore
-                    {
-                        expand: true,
-                        flatten: true,
-                        src: [
-                            'app/.bower_components/underscore/underscore.js',
-                            'app/.bower_components/underscore/underscore-min.js',
-                            'app/.bower_components/underscore/underscore-min.map'
-                        ],
-                        dest: 'app/bower_components/underscore/'
-                    }
-                ]
             }
         },
         clean: {
@@ -160,20 +92,6 @@ module.exports = function (grunt) {
                         ]
                     }
                 ]
-            },
-            bower_after: {
-                files: {
-                    src: [
-                        'app/.bower_components'
-                    ]
-                }
-            },
-            bower_before: {
-                files: {
-                    src: [
-                        'app/bower_components'
-                    ]
-                }
             }
         },
         compass: {
@@ -195,7 +113,7 @@ module.exports = function (grunt) {
         cssmin: {
             dist: {
                 files: {
-                    'app/css/main.css': ['app/.tmp/styles/{,*/}*.css']
+                    'app/styles/css/main.css': ['app/.tmp/styles/{,*/}*.css']
                 }
             }
         },
@@ -230,12 +148,5 @@ module.exports = function (grunt) {
         'compass:dist',
         'cssmin:dist',
         'copy:dist'
-    ]);
-
-    grunt.registerTask('update', [
-        'clean:bower_before',
-        'bower:install',
-        'copy:bower',
-        'clean:bower_after'
     ]);
 };

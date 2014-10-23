@@ -1,0 +1,98 @@
+//
+// Utility Classes
+// --------------------------------------------------
+
+// Floating Helper Classes
+// -------------------------
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
+.hidden {
+    display: none;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+// Padding Helper Classes
+// -------------------------
+.p-top-40 {
+    padding-top: 40px !important;
+}
+
+.p-top-20 {
+    padding-top: 20px !important;
+}
+
+.p-bottom-20 {
+    padding-bottom: 20px !important;
+}
+
+.p-right-20 {
+    padding-right: 20px !important;
+}
+
+.p-left-20 {
+    padding-left: 20px !important;
+}
+
+// margin Helper Classes
+// -------------------------
+.m-top-0 {
+    margin-top: 0px !important;
+}
+.m-top-5 {
+    margin-top: 5px !important;
+}
+
+.m-top-20 {
+    margin-top: 20px !important;
+}
+
+.m-bottom-0 {
+    margin-bottom: 0px !important;
+}
+
+.m-bottom-20 {
+    margin-bottom: 20px !important;
+}
+
+.m-right-20 {
+    margin-right: 20px !important;
+}
+
+.m-left-20 {
+    margin-left: 20px !important;
+}
+.m-left-24 {
+    margin-left: 24px !important;
+}
+
+// text Helper Classes
+// -------------------------
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
