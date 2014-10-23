@@ -1,0 +1,13 @@
+{
+    "name": "Backbone-Setup",
+    "version": "1.0.0",
+    "dependencies": {
+        "modernizr": "~2.8.3",
+        "backbone": "~1.1.2",
+        "jquery": "~2.1.1",
+        "underscore": "~1.7.0",
+        "requirejs": "~2.1.15",
+        "requirejs-text": "~2.0.12",
+        "requirejs-i18n": "~2.0.4"
+    }
+}
