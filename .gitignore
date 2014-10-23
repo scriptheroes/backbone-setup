@@ -1,0 +1,13 @@
+app/bower_components
+
+node_modules
+.bower_components
+.tmp
+.sass-cache
+
+# IDEs
+.idea/*
+*.iml
+
+# System files
+.DS_Store
